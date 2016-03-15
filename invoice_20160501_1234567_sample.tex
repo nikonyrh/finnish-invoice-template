@@ -1,0 +1,24 @@
+\input{invoice_header.tex}
+
+\input{company_sample.tex}
+\input{client_sample.tex}
+
+\newcommand{\BillRows}{
+	\RB 1 & \parbox[t]{5.5cm}{Työn otsikko\\01.02.2016-29.02.2016} &
+						\RB 10,00 & \RB 20,00 & \RB 4,80 & \RB 24\% & \RB 200,00 & \RB 48,00 & \RB 248,00 \\[2.2ex]
+	\RB 2 & \parbox[t]{5.5cm}{Työn otsikko\\01.03.2016-31.03.2016} &
+						\RB 10,00 & \RB 20,00 & \RB 4,80 & \RB 24\% & \RB 200,00 & \RB 48,00 & \RB 248,00 \\[2.2ex]
+	\RB 3 & \parbox[t]{5.5cm}{Työn otsikko\\01.04.2016-30.04.2016} &
+						\RB 10,00 & \RB 20,00 & \RB 4,80 & \RB 24\% & \RB 200,00 & \RB 48,00 & \RB 248,00 \\[2.2ex]
+}
+
+\newcommand{\BillTotalNet}{600,00}
+\newcommand{\BillTotalTax}{144,00}
+\newcommand{\BillTotal}{744,00}
+
+\newcommand{\BillNumber}{10001}
+\newcommand{\BillDate}{01.05.2016}
+\newcommand{\BillDueDate}{15.05.2016}
+\newcommand{\BillRefNumber}{12 34567}
+
+\input{invoice_body.tex}

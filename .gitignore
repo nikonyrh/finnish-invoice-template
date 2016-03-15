@@ -1,0 +1,8 @@
+# A white-list based ignore file
+*
+!*/
+!.gitignore
+!*_sample.tex
+!invoice_head.tex
+!invoice_body.tex
+sent_bills/
