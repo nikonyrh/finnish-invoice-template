@@ -1,0 +1,50 @@
+% Standard Finnish Invoice Template v0.4
+% Copyright 2008 Jaakko Heusala <jheusala@iki.fi>
+% 
+% See README in finnish for instructions.
+% 
+% $Id: invoice.tex 4581 2008-02-24 18:59:30Z jheusala $
+% [The zlib/libpng License]
+% 
+% This software is provided 'as-is', without any express or implied
+% warranty. In no event will the authors be held liable for any damages
+% arising from the use of this software.
+% 
+% Permission is granted to anyone to use this software for any purpose,
+% including commercial applications, and to alter it and redistribute it
+% freely, subject to the following restrictions:
+%
+%    1. The origin of this software must not be misrepresented; you must not
+%    claim that you wrote the original software. If you use this software
+%    in a product, an acknowledgment in the product documentation would be
+%    appreciated but is not required.
+%
+%    2. Altered source versions must be plainly marked as such, and must not be
+%    misrepresented as being the original software.
+%
+%    3. This notice may not be removed or altered from any source
+%    distribution.
+%
+\documentclass[a4paper,10pt]{letter}
+\usepackage{pslatex}
+\usepackage[utf8]{inputenc}
+\usepackage[finnish]{babel}
+\pagestyle{empty}
+\usepackage[left=0cm,top=0cm,right=0cm,bottom=0cm,nohead,nofoot]{geometry}
+\usepackage[gen]{eurosym}
+\usepackage{color}
+\usepackage{rotating}
+\usepackage[T1]{fontenc} % Fixes scandinavian character problem
+
+\newcommand{\RB}{\raggedbottom}
+
+% Used for horizontal and vertical lines at the bottom part
+%\newcommand{\HighlightColor}{blue}
+%\newcommand{\HighlightColor}{red}
+\newcommand{\HighlightColor}{black}
+
+% a Python script to calculate the check digit and format with spaces:
+\iffalse
+a = '123244325435'; b = a + str((10-(sum(int(a[-i-1])*round(7-4*(i%3)**0.6) for i in range(len(a))) % 10))%10); b
+from itertools import islice; c = iter(reversed(b)); ' '.join(reversed([''.join(reversed(i)) for i in iter(lambda: tuple(islice(c, 5)), ())]))
+\fi

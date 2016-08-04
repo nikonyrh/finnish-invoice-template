@@ -3,6 +3,6 @@
 !*/
 !.gitignore
 !*_sample.tex
-!invoice_head.tex
+!invoice_header.tex
 !invoice_body.tex
 sent_bills/
